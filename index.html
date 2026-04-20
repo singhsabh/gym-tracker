@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gym Tracker</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+  <h1>Gym Tracker 💪</h1>
+
+  <input type="text" id="exercise" placeholder="Exercise"><br><br>
+  <input type="number" id="weight" placeholder="Weight (kg)"><br><br>
+  <input type="number" id="reps" placeholder="Reps"><br><br>
+
+  <button onclick="addWorkout()">Add Workout</button>
+
+  <h2>Workout Log</h2>
+  <ul id="log"></ul>
+
+  <script>
+    function addWorkout() {
+      let ex = document.getElementById("exercise").value;
+      let wt = document.getElementById("weight").value;
+      let reps = document.getElementById("reps").value;
+
+      let li = document.createElement("li");
+      li.innerText = ex + " - " + wt + "kg x " + reps;
+
+      document.getElementById("log").appendChild(li);
+    }
+  </script>
+</body>
+</html>
